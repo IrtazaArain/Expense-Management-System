@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %} Signin {% endblock %}
+
+{% block content %}
+<div class="split-container">
+    <!-- Left Section -->
+    <div class="left-section">
+        <div class="branding-content">
+            <h1 class="branding-title">Track Better, Spend Smarter,<br> Live Freer.
+            </h1>
+            <div class="illustration">
+                <img src="{% static 'images/illustration.png' %}" alt="Illustration">
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="form-card">
+            <h2 class="form-title">Create Account</h2>
+            <form method="post" novalidate>
+                {% csrf_token %}
+                {% for field in form %}
+                <div class="form-group">
+                    {{ field }}
+                    {% if field.errors %}
+                        <div class="form-error">{{ field.errors }}</div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+                <button type="submit" class="form-button">Sign Up</button>
+            </form>
+            <p class="signin-link">Already have an account? 
+                <a href="{% url 'accounts:login' %}" class="form-link">Sign In</a>
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

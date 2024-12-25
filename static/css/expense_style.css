@@ -1,0 +1,322 @@
+:root {
+    --primary: #6750A4;
+    --on-primary: #FFFFFF;
+    --primary-container: #EADDFF;
+    --on-primary-container: #4F378B;
+    --primary-fixed-dim: #D0BCFF;
+    --error: #B3261E;
+    --on-error: #FFFFFF;
+    --error-container: #F9DEDC;
+    --on-error-container: #8C1D18;
+    --surface: #FEF7FF;
+    --on-surface: #1D1B20;
+    --inverse-surface: #322F35;
+    --surafce-container-low: #F7F2FA;
+    --surface-container-lowest: #FFFFFF;
+    --outline: #79747E;
+    --outline-varient: #CAC4D0;
+}
+
+:root[data-theme="dark"] {
+    --primary: #673AB7;
+    --on-primary: #FFFFFF;
+    --primary-container: #B39DDB;
+    --on-primary-container: #4F378B;
+    --error: #B3261E;
+    --on-error: #FFFFFF;
+    --error-container: #F9DEDC;
+    --on-error-container: #8C1D18;
+    --surface: #FEF7FF;
+    --on-surface: #1D1B20;
+    --inverse-surface: #322F35;
+    --surafce-container-low: #EADDFF;
+    --surface-container-lowest: #0d040b;
+    --outline: #79747E;
+    --outline-varient: #CAC4D0;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--surface-container-lowest);
+    color: var(--text);
+    font-family: DM Sans, Roboto, -apple-system, Segoe UI, sans-serif;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+    background-color: var(--primary);
+    color: var(--on-primary);
+    font-size: 1.5rem;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-between;
+}
+
+#theme-toggle-button svg {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #fff;
+}
+
+#logout-button svg {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    fill: #fff;
+}
+
+#theme-toggle-button:hover svg {
+    fill: var(--accent);
+}
+
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+thead th {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    padding: 10px;
+}
+
+thead th.action-th {
+    text-align: center;
+}
+
+tbody td {
+    padding: 4px 10px;
+    color: var(--on-surface);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--surafce-container-low);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--primary-container);
+}
+
+.custom-td {
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-container{
+    width: 70%;
+    text-align: right;
+    margin: 20px;
+}
+
+#add{
+    background-color: var(--primary);
+    color: var(--on-primary);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#add:hover {
+    background-color: var(--on-primary-container);
+}
+
+#delete{
+    background-color: var(--error);
+    color: var(--on-error);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#delete:hover {
+    background-color: var(--on-error-container);
+}
+
+#edit{
+    background-color: var(--primary);
+    color: var(--on-primary);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#edit:hover {
+    background-color: var(--on-primary-container);
+}
+
+.card-container{
+    display: flex;
+    width: 70%;
+    margin: 10px;
+    justify-content: flex-start;
+}
+
+.card {
+    width: 300px;
+    padding: 20px;
+    margin: 10px;
+    background-color: var(--primary-fixed-dim);
+    color: var(--on-primary-container);
+    border-radius: 8px;
+    border-color: var(--outline-varient);
+    text-align: left;
+}
+
+.title-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#add-budget {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#add-budget:hover {
+    background-color: var(--on-primary-container);
+}
+
+/* General container styling */
+.form-container {
+    background-color: var(--surface);
+    color: var(--on-surface);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    box-sizing: border-box;
+}
+
+/* Form header styling */
+.form-container h1 {
+    color: var(--on-primary-container);
+    background-color: var(--primary-container);
+    padding: 10px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Form fields container */
+.form-fields {
+    margin-bottom: 15px;
+}
+
+/* Individual form group */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+/* Label styling */
+.form-fields label {
+    display: block;
+    font-size: 1rem;
+    color: var(--on-surface);
+    margin-bottom: 0.5rem;
+}
+
+/* Input and textarea fields */
+input[type="text"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--outline);
+    border-radius: 4px;
+    background-color: var(--surface-container-low);
+    color: var(--on-surface);
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+/* Focus state for fields */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary);
+    outline: none;
+    box-shadow: 0 0 5px var(--primary);
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: var(--primary);
+    color: var(--on-primary);
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-fixed-dim);
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 1.5rem;
+    }
+    .btn-primary {
+        font-size: 0.9rem;
+    }
+}

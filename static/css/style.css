@@ -1,0 +1,138 @@
+:root {
+    --text: #0a0a0f;
+    --background: #fafafa;
+    --primary: #6c5ce0;
+    --secondary: #9489e6;
+    --accent: #5f4ceb;
+}
+
+:root[data-theme="dark"] {
+    --text: #f0f0f5;
+    --background: #08060e;
+    --primary: #2e1fa3;
+    --secondary: #241976;
+    --accent: #2614b3;
+}
+  
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--background);
+    font-family: DM Sans, Roboto, -apple-system, Segoe UI, sans-serif;
+}
+
+.split-container {
+    display: flex;
+    height: 100vh;  
+}
+
+.left-section {
+    background-color: #635bff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-align: center;
+    font-size: 2rem;
+    padding: 2rem;
+    width: 50%;
+}
+
+.branding-title {
+    font-size: 2.2rem;
+    line-height: 1.5;
+}
+
+.highlight {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.illustration img {
+    margin-top: 20px;
+    width: 80%;
+    max-width: 300px;
+}
+
+.right-section {
+    background-color: var(--background);
+    border-radius: 20px;
+    padding: 2rem;
+    width: 60%;
+    margin-left: -2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-card {
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.form-group {
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc; 
+    width: 100%;
+    padding: 10px 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-button {
+    width: 100%;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #574aba;
+}
+
+.signin-link {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #666666;
+}
+
+.form-link {
+    color: var(--clr-primary-a0);
+    text-decoration: none;
+}
+
+.form-link:hover {
+    text-decoration: underline;
+}
